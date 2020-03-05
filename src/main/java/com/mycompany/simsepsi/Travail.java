@@ -14,14 +14,20 @@ public class Travail {
 	
 	public Travail(String nom ,String date) {
 		// TODO Auto-generated method stub
-		
 		nomSim = nom;
 		dateTravail = date;
-		int nbRandom = (int) (Math.random()*100);
-		Random aléatoire = new Random ();
-		System.out.println(aléatoire.ints(0, 5));
-		System.out.println(aléatoire.nextInt(5));
+		
+
 		System.out.println(date+" : "+nom+" va au travail.");
+		Random aléatoire = new Random ();
+		int nb = aléatoire.nextInt(5);	
+		switch (nb) {
+		case 0 : discute();
+		case 1 : gateau();
+		case 2 : bourreauTravail();
+		case 3 : patron();
+		case 4 : 
+		}
 		System.out.println(date+" : "+nom+" va manger.");
 		System.out.println(date+" : "+nom+" quitte le travail.");
 	}
