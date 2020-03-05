@@ -10,5 +10,7 @@ package com.mycompany.simsepsi;
  * @author gauti
  */
 public class Sim {
+    int energie, faim, sociabilite, stress, fierte;
+    
     
 }
