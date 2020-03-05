@@ -5,6 +5,7 @@
  */
 package com.mycompany.simsepsi;
 
+import java.util.Random;
 
 public class Travail {
 
@@ -13,9 +14,13 @@ public class Travail {
 	
 	public Travail(String nom ,String date) {
 		// TODO Auto-generated method stub
-		Math.random();
+		
 		nomSim = nom;
 		dateTravail = date;
+		int nbRandom = (int) (Math.random()*100);
+		Random aléatoire = new Random ();
+		System.out.println(aléatoire.ints(0, 5));
+		System.out.println(aléatoire.nextInt(5));
 		System.out.println(date+" : "+nom+" va au travail.");
 		System.out.println(date+" : "+nom+" va manger.");
 		System.out.println(date+" : "+nom+" quitte le travail.");

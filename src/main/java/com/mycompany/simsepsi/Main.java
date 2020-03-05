@@ -14,6 +14,7 @@ public class Main {
     public static void main( String[] Args)
     {
         System.out.println();
+        Travail travail = new Travail("Alex","");
     }
     
 }
