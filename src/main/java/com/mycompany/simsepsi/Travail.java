@@ -12,10 +12,14 @@ public class Travail {
 	private String nomSim;
 	private String dateTravail;
 	private Random aléatoire = new Random ();
-	public Travail(String nom ,String date) {
+	private Sim simTravail;
+	
+	public Travail(Sim sim,String nom ,String date) {
 		// TODO Auto-generated method stub
 		nomSim = nom;
 		dateTravail = date;
+		simTravail = sim;
+		
 		int nb;
 		
 		System.out.println(date+" : "+nom+" va au travail.");
