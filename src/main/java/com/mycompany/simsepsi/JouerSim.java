@@ -15,12 +15,14 @@ public class JouerSim {
     private static int heure = 6;
     private static int minute = 0;
     public static String newLine = System.getProperty("line.separator");
+    public Sim sim;
     
     public void Run()
     {
-        Sim sim = new Sim(this);
+        sim = new Sim(this);
         sim.nom = "Truc-bidule";
         sim.prenom = "Alex";
+        Afficher();
         
     }
     
@@ -40,6 +42,61 @@ public class JouerSim {
     public void Afficher()
     {
         clearScreen();
+        System.out.println("Jour " + jour );
+        System.out.print("Energie : ");
+        for(int i = 1; i <= sim.energie; i++)
+        {
+            System.out.print("*");
+        }
+        for(int i = 1; i < 21 - sim.energie; i++)
+        {
+            System.out.print("_");
+        }
+        System.out.print(sim.energie + "/20" + newLine);
+        
+        System.out.print("Satiete : ");
+        for(int i = 1; i <= sim.satiete; i++)
+        {
+            System.out.print("*");
+        }
+        for(int i = 1; i < 21 - sim.satiete; i++)
+        {
+            System.out.print("_");
+        }
+        System.out.print(sim.satiete + "/20" + newLine);
+        
+        System.out.print("Sociabilite : ");
+        for(int i = 1; i <= sim.sociabilite; i++)
+        {
+            System.out.print("*");
+        }
+        for(int i = 1; i < 21 - sim.sociabilite; i++)
+        {
+            System.out.print("_");
+        }
+        System.out.print(sim.sociabilite + "/20" + newLine);
+        
+        System.out.print("Detente : ");
+        for(int i = 1; i <= sim.detente; i++)
+        {
+            System.out.print("*");
+        }
+        for(int i = 1; i < 21 - sim.detente; i++)
+        {
+            System.out.print("_");
+        }
+        System.out.print(sim.detente + "/20" + newLine);
+        
+        System.out.print("Fierte : ");
+        for(int i = 1; i <= sim.fierte; i++)
+        {
+            System.out.print("*");
+        }
+        for(int i = 1; i < 21 - sim.fierte; i++)
+        {
+            System.out.print("_");
+        }
+        System.out.print(sim.fierte + "/20" + newLine);
         
     }
     

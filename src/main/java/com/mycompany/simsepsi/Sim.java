@@ -12,7 +12,7 @@ import java.util.Date;
  * @author gauti
  */
 public class Sim {
-    protected int energie=20, satiete=20, sociabilite=20, detente=20, fierte=20;
+    protected int energie=20, satiete=20, sociabilite=20, detente=20, fierte=10;
     protected String nom, prenom;
     protected Travail travail;
     protected JouerSim main;
