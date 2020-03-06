@@ -15,9 +15,9 @@ public class Sim {
     protected int energie=20, satiete=20, sociabilite=20, detente=20, fierte=20;
     protected String nom, prenom;
     protected Travail travail;
-    protected Main main;
+    protected JouerSim main;
     
-    public Sim(Main pmain)
+    public Sim(JouerSim pmain)
     {
         main = pmain;
     }
