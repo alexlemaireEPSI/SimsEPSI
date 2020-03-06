@@ -9,20 +9,18 @@ import java.util.Random;
 
 public class Travail {
 
-	private String nomSim;
 	private String dateTravail;
 	private Random aléatoire = new Random ();
 	private Sim simTravail;
 	
-	public Travail(Sim sim,String nom ,String date) {
+	public Travail(Sim sim,String date) {
 		// TODO Auto-generated method stub
-		nomSim = nom;
 		dateTravail = date;
 		simTravail = sim;
 		
 		int nb;
 		
-		System.out.println(date+" : "+nom+" va au travail.");
+		System.out.println(date+" : "+simTravail.nom+" va au travail.");
 		nb = aléatoire.nextInt(5);
 		for (int i =0;i<nb;i++) 
 		{
@@ -37,7 +35,7 @@ public class Travail {
 				case 4 : 
 			}
 		}
-		System.out.println(date+" : "+nom+" va manger.");
+		System.out.println(date+" : "+simTravail.nom+" va manger.");
 		nb = aléatoire.nextInt(5);
 		for (int i =0;i<nb;i++) 
 		{
@@ -52,7 +50,7 @@ public class Travail {
 				case 4 : 
 			}
 		}
-		System.out.println(date+" : "+nom+" quitte le travail.");
+		System.out.println(date+" : "+simTravail.nom+" quitte le travail.");
 	}
 	
 	private void discute()
@@ -64,16 +62,16 @@ public class Travail {
 			nb = aléatoire.nextInt(5);	
 			switch (nb) 
 			{
-				case 0 : System.out.println(dateTravail+" : "+nomSim+" discute avec son collègue.");
+				case 0 : System.out.println(dateTravail+" : "+simTravail.nom+" discute avec son collègue.");
 						System.out.println("Sociabilité +1");
-				case 1 : System.out.println(dateTravail+" : "+nomSim+" se dispute avec son collègue.");
+				case 1 : System.out.println(dateTravail+" : "+simTravail.nom+" se dispute avec son collègue.");
 						System.out.println("Sociabilité -2");
-				case 2 : System.out.println(dateTravail+" : "+nomSim+" se sent seul, son collègue est en congé.");
+				case 2 : System.out.println(dateTravail+" : "+simTravail.nom+" se sent seul, son collègue est en congé.");
 						System.out.println("Sociabilité -1");
-				case 3 : System.out.println(dateTravail+" : "+nomSim+" offre un café à un collègue et discute un peu avec lui.");
-						System.out.println(nomSim+" réalise que c'est en fait son supérieur.");
+				case 3 : System.out.println(dateTravail+" : "+simTravail.nom+" offre un café à un collègue et discute un peu avec lui.");
+						System.out.println(simTravail.nom+" réalise que c'est en fait son supérieur.");
 						System.out.println("Stress -1");
-				case 4 : System.out.println(dateTravail+" : "+nomSim+" demande à un collègue comment fonctionne la nouvelle imprimante.");
+				case 4 : System.out.println(dateTravail+" : "+simTravail.nom+" demande à un collègue comment fonctionne la nouvelle imprimante.");
 			}
 		}
 		
@@ -89,17 +87,17 @@ public class Travail {
 				nb = aléatoire.nextInt(5);	
 				switch (nb) 
 				{
-					case 0 : System.out.println(dateTravail+" : "+nomSim+" trouve un mars sur son bureau.");
+					case 0 : System.out.println(dateTravail+" : "+simTravail.nom+" trouve un mars sur son bureau.");
 							System.out.println("Faim +1");
-					case 1 : System.out.println(dateTravail+" : "+nomSim+" est convié à un petit déjeuner avec ses collègues.");
+					case 1 : System.out.println(dateTravail+" : "+simTravail.nom+" est convié à un petit déjeuner avec ses collègues.");
 							System.out.println("Sociabilité +3");
 							System.out.println("Faim +3");
-					case 2 : System.out.println(dateTravail+" : "+nomSim+" partage avec la nouvelle stagiaire la brioche qu'elle a apporté.");
+					case 2 : System.out.println(dateTravail+" : "+simTravail.nom+" partage avec la nouvelle stagiaire la brioche qu'elle a apporté.");
 							System.out.println("Stress -1");
 							System.out.println("Faim +1");
-					case 3 : System.out.println(dateTravail+" : "+nomSim+" fait tomber son gateau au chocolat par terre.");
+					case 3 : System.out.println(dateTravail+" : "+simTravail.nom+" fait tomber son gateau au chocolat par terre.");
 							System.out.println("Stress +1");
-					case 4 : System.out.println(dateTravail+" : "+nomSim+" se rend au distributeur automatique de friandises.");
+					case 4 : System.out.println(dateTravail+" : "+simTravail.nom+" se rend au distributeur automatique de friandises.");
 							System.out.println("Faim +1");
 				}
 			}
@@ -108,7 +106,7 @@ public class Travail {
 	
 	private void bourreauTravail()
 	{
-		System.out.println(dateTravail+" : "+nomSim+" a très bien travaillé aujourd'hui.");
+		System.out.println(dateTravail+" : "+simTravail.nom+" a très bien travaillé aujourd'hui.");
 		System.out.println("Satisfaction Personnel +1");
 		System.out.println("Faim -1");
 		System.out.println("Energie -3");
@@ -117,9 +115,9 @@ public class Travail {
 	
 	private void patron()
 	{
-		System.out.println(dateTravail+" : "+nomSim+" est convoqué par le patron.");
+		System.out.println(dateTravail+" : "+simTravail.nom+" est convoqué par le patron.");
 		System.out.println("Stress +1");
-		System.out.println(dateTravail+" : "+nomSim+" est rassuré, l'entretien s'est bien passé.");
+		System.out.println(dateTravail+" : "+simTravail.nom+" est rassuré, l'entretien s'est bien passé.");
 		System.out.println("Stress -5");
 	}
 }
