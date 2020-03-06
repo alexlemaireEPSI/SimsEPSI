@@ -18,7 +18,7 @@ public class Main {
     
     public static void main( String[] Args)
     {
-        System.out.println("Jour " + jour + newLine + "Il est : " + heure + "h" + minute);
+        Sim sim;
     }
     
     public void PasserTemps(int heure, int minute)
@@ -26,7 +26,7 @@ public class Main {
         
     }
     
-    public void reglerHeure(int heure, int minute)
+    public void ReglerHeure(int heure, int minute)
     {
         
     }

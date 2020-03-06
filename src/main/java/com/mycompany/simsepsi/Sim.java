@@ -12,7 +12,7 @@ import java.util.Date;
  * @author gauti
  */
 public class Sim {
-    protected int energie=20, satiete=20, sociabilite=20, stress=20, fierte=20;
+    protected int energie=20, satiete=20, sociabilite=20, detente=20, fierte=20;
     protected String nom, prenom;
     protected Travail travail;
     protected Main main;
@@ -25,7 +25,7 @@ public class Sim {
     public void Travailler()
     {
         travail = new Travail(this, nom, "8h");
-        main.reglerHeure(16, 0);
+        main.ReglerHeure(16, 0);
         energie -= 5;
         
     }
