@@ -35,6 +35,7 @@ public class Travail {
 				case 4 : 
 			}
 		}
+		JouerSim.ReglerHeure(12, 0);
 		System.out.println(date+" : "+simTravail.nom+" va manger.");
 		nb = aléatoire.nextInt(5);
 		for (int i =0;i<nb;i++) 
