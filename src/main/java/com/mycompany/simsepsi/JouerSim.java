@@ -24,7 +24,7 @@ public class JouerSim {
         sim.prenom = "Alex";
         Afficher();
         sim.Travailler();
-        Afficher()
+        Afficher();
         
     }
     
