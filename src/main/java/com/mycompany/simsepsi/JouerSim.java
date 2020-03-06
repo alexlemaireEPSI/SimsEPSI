@@ -23,6 +23,8 @@ public class JouerSim {
         sim.nom = "Truc-bidule";
         sim.prenom = "Alex";
         Afficher();
+        sim.Travailler();
+        Afficher()
         
     }
     
@@ -41,7 +43,8 @@ public class JouerSim {
     
     public void Afficher()
     {
-        clearScreen();
+        //clearScreen();
+        System.out.println("--------------------------------------------------");
         System.out.println("Jour " + jour );
         System.out.print("Energie : ");
         for(int i = 1; i <= sim.energie; i++)
