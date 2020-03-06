@@ -11,9 +11,15 @@ package com.mycompany.simsepsi;
  */
 public class Main {
     
+    public int jour;
+    
     public static void main( String[] Args)
     {
         System.out.println();
     }
     
+    public void Afficher()
+    {
+        
+    }
 }
