@@ -24,7 +24,7 @@ public class Sim {
     
     public void Travailler()
     {
-        travail = new Travail(this, nom, "8h");
+        travail = new Travail(this, "8h");
         main.ReglerHeure(16, 0);
         energie -= 5;
         
