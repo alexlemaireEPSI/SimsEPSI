@@ -12,18 +12,28 @@ import java.util.Date;
  * @author gauti
  */
 public class Sim {
-    int energie=20, faim=20, sociabilite=20, stress=20, fierte=20;
-    String nom, prenom;
-    Travail travail;
+    protected int energie=20, satiete=20, sociabilite=20, stress=20, fierte=20;
+    protected String nom, prenom;
+    protected Travail travail;
+    protected Main main;
     
-    public Sim()
+    public Sim(Main pmain)
     {
-        
+        main = pmain;
     }
     
     public void Travailler()
     {
-        travail = new Travail(this, "8h");
+        travail = new Travail(this, nom, "8h");
+        main.reglerHeure(16, 0);
+        energie -= 5;
         
     }
+    
+    public void PrendreRepas()
+    {
+        satiete = 20;
+    }
+    
+    
 }
