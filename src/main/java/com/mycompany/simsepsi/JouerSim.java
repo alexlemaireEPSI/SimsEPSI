@@ -19,7 +19,13 @@ public class JouerSim {
     public void Run()
     {
         Sim sim = new Sim(this);
+        sim.nom = "Truc-bidule";
+        sim.prenom = "Alex";
+        
     }
+    
+    public int GetHeure(){return heure;}
+    public int GetMinute(){return minute;}
     
     public void PasserTemps(int heure, int minute)
     {
@@ -29,5 +35,16 @@ public class JouerSim {
     public void ReglerHeure(int heure, int minute)
     {
         
+    }
+    
+    public void Afficher()
+    {
+        clearScreen();
+        
+    }
+    
+    public void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }

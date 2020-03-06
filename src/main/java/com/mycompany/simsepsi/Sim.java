@@ -22,11 +22,16 @@ public class Sim {
         main = pmain;
     }
     
-    public void Travailler()
+    public boolean Travailler()
     {
         travail = new Travail(this, "8h");
         main.ReglerHeure(16, 0);
         energie -= 5;
+        if (energie>=0){
+            return true;
+        }
+        return false;
+        
         
     }
     
