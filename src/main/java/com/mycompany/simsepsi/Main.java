@@ -26,4 +26,9 @@ public class Main {
         
     }
     
+    public void reglerHeure(int heure, int minute)
+    {
+        
+    }
+    
 }
